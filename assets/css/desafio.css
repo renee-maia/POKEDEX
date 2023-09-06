@@ -1,0 +1,46 @@
+.top {
+  background-color: #78c850;
+  height: 50vh;
+  width: 100vw;
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.namedesafio {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.numberdesafio {
+  color: #fff;
+  text-align: right;
+  font-size: 1rem;
+  list-style: none;
+  margin: 0;
+}
+
+.detaildesafio {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.typesdesafio {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template: auto;
+}
+
+.detaildesafio .typesdesafio img {
+  border-style: none;
+  max-width: 100%;
+  height: 180px;
+  align-self: center;
+  margin-top: 3rem;
+}

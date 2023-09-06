@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="modal" ${pokemon.type}>
+      <div class="openCloseModal">
+        <button class="buttonModal">Back</button>
+      </div>
+
+      <h2 class="numberModal">#${pokemon.number}</h2>
+      <h2 class="nameModal">${pokemon.name}</h2>
+
+      <div class="detail">
+        <ol class="types">
+          ${pokemon.types .map((type) => `
+          <li class="type ${type}">${type}</li>
+          `) .join("")}
+        </ol>
+
+        <img class="imgModal" src="${pokemon.photo}" alt="${pokemon.name}" />
+      </div>
+
+      <div class="modal-bottom">
+        <ol class="modalDetailsList">
+          <li>Height:${pokemon.height}</li>
+          <li>Weight:${pokemon.weight}</li>
+        </ol>
+
+        <ol class="modalDetailsList">
+          Abilities: ${pokemon.abilities .map( (ability) => `
+          <li class="modalDetailsList" ${ability}>${ability}</li>
+          ` ) .join("")}
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
