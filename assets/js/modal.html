@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="modal" ${pokemon.type}>
-      <div class="openCloseModal">
-        <button class="buttonModal">Back</button>
-      </div>
+<div class="modal"></div>
+<div class="modal-top ${pokemon.type}" >
+  <h2 class="nameModal">${pokemon.name}</h2>
+  <h2 class="numberModal">${pokemon.number}</h2>
 
-      <h2 class="numberModal">#${pokemon.number}</h2>
-      <h2 class="nameModal">${pokemon.name}</h2>
+  <div class="detail">
+    <ol class="types">
+        ${pokemon.types
+          .map((type) => `<li class="type ${type}">${type}</li>`)
+          .join("")}
+    </ol>
 
-      <div class="detail">
-        <ol class="types">
-          ${pokemon.types .map((type) => `
-          <li class="type ${type}">${type}</li>
-          `) .join("")}
-        </ol>
+    <img src="${pokemon.photo}"
+         alt="${pokemon.name}">
+</div>
 
-        <img class="imgModal" src="${pokemon.photo}" alt="${pokemon.name}" />
-      </div>
+<div class="modal-bottom">
+<h1 class="aboutModal">About</h1>
+<ol class="modalDetailList">
+  <li>Height: ${pokemon.height}</li>
+  <li>Weight: ${pokemon.weight}</li>
+  <div class="modalDetailsList">
+    <ol class="abilities">Abilites: 
+        ${pokemon.abilities.map((ability) => `<li class="ability ${ability}">${ability}</li>`)
+          .join("")}
+    </ol>
 
-      <div class="modal-bottom">
-        <ol class="modalDetailsList">
-          <li>Height:${pokemon.height}</li>
-          <li>Weight:${pokemon.weight}</li>
-        </ol>
-
-        <ol class="modalDetailsList">
-          Abilities: ${pokemon.abilities .map( (ability) => `
-          <li class="modalDetailsList" ${ability}>${ability}</li>
-          ` ) .join("")}
-        </ol>
-      </div>
-    </div>
-  </body>
-</html>
+</ol>
+</div>
+  </div>
+</div>
