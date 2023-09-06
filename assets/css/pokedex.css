@@ -133,12 +133,16 @@
   font-size: 0.725rem;
 }
 
+.fade {
+  background-color: #515151;
+}
+
 .button-modal {
   padding: 0;
   margin: 0;
 }
 
-#button-open-modal {
+.open-modal {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
   color: #fff;
