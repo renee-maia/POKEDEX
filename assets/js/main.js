@@ -22,10 +22,24 @@ function convertPokemonToLi(pokemon) {
                    alt="${pokemon.name}">
           </div>
           <div class="buttonModal">
-          <button class="open-modal">More</button>
+          <button onclick="openModal(${
+            pokemon.number
+          })" class="open-modal">More</button>
+          </div>
+          <div id="modal_${pokemon.number} class="modal">
+          <button onclick="closeModal(${
+            pokemon.number
+          })" class="open-modal">Close</button>
           </div>
       </li>
   `;
+}
+
+function openModal(id) {
+  const modal = document.getElementById(`modal_${id}`);
+}
+function closeModal(id) {
+  const modal = document.getElementById(`modal_${id}`);
 }
 
 function loadPokemonItens(offset, limit) {

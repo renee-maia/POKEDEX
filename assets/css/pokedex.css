@@ -173,7 +173,7 @@ button:hover {
   opacity: 1;
 }
 
-#modal {
+.modal {
   position: fixed;
   left: 50%;
   top: 50%;
