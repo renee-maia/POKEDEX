@@ -21,7 +21,7 @@ function convertPokemonToLi(pokemon) {
               <img src="${pokemon.photo}"
                    alt="${pokemon.name}">
           </div>
-          <div class="divButtonModal">
+          <div>
           <button onclick="openModal(${
             pokemon.number
           })" class="modalButton">More</button>
@@ -48,14 +48,22 @@ function convertPokemonToLi(pokemon) {
                   `
                     )
                     .join("")}
-                </ol>
+               </ol>
   
-                <img src="${pokemon.photo}" alt="${pokemon.name}" />
               </div>
+<div class="pokemonPhotoModal">
+              <img src="${pokemon.photo}" alt="${pokemon.name}" />
+</div>
+
             </div>
 
             <div class="modal-bottom">
-              <h3 class="modalAbout">About</h3>
+            <ol class="detailTabs">  
+            <li class="modalAbout">About</li>
+            <li class="modalTab">Base Stats</li>
+            <li class="modalTab">Evolution</li>
+</ol>
+
 <hr> 
 
               <ol class="modalDetailsList">

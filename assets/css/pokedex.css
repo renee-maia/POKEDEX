@@ -135,13 +135,14 @@
 
 .modal {
   padding: 0;
-  width: 500px;
+  width: 800px;
   max-width: 90%;
   border-style: none;
 }
 
 .divButtonModalClose {
   margin: 1rem;
+  margin-bottom: 0;
   padding: 0;
 }
 
@@ -161,7 +162,6 @@
 .modal-top {
   margin: 0;
   padding: 1rem;
-  width: 100%;
 }
 
 .nameModal {
@@ -175,9 +175,36 @@
 .numberModal {
   color: #fff;
   text-align: right;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   margin: 0;
   padding: 0, 0.5rem;
+}
+
+.typesModal {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem 0;
+  font-size: 0.725rem;
+  border-radius: 1rem;
+  filter: brightness(1.12);
+  text-align: center;
+}
+
+.pokemonPhotoModal {
+  margin-top: 1rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.pokemon .modal-top img {
+  border-style: none;
+  max-width: 100%;
+  height: 150px;
 }
 
 .modal-bottom {
@@ -195,14 +222,34 @@
 .modalAbout {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.detailTabs {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  padding: 0;
+}
+
+.modalTab {
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0;
   font-size: 0.625rem;
   font-weight: 300;
+  color: #515151;
+  opacity: 0.65;
 }
 
 hr {
   border: 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1rem;
   border-top: 1px solid #515151;
   opacity: 0.25;
@@ -236,8 +283,9 @@ hr {
 
 .modalMovesList {
   list-style: none;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-left: 0.5rem;
+  margin-bottom: 1rem;
   padding: 0;
   display: flex;
   flex-direction: column;
