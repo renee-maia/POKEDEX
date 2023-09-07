@@ -21,20 +21,23 @@ function convertPokemonToLi(pokemon) {
               <img src="${pokemon.photo}"
                    alt="${pokemon.name}">
           </div>
-          <div class="buttonModal">
+          <div class="divButtonModal">
           <button onclick="openModal(${
             pokemon.number
           })" class="modalButton">More</button>
           </div>
 
-          <dialog id="modal_${pokemon.number}" class="modal">
+
+          <dialog id="modal_${pokemon.number}" class="modal ${pokemon.type}">
+          <div class="divButtonModalClose">
           <button onclick="closeModal(${
             pokemon.number
           })" class="modalButton">Close</button>
-          <div>
-            <div class="modal-top ${pokemon.type}">
+          </div>
+           
+          <div class="modal-top">
               <h2 class="nameModal">${pokemon.name}</h2>
-              <h2 class="numberModal">${pokemon.number}</h2>
+              <h2 class="numberModal">#${pokemon.number}</h2>
   
               <div class="detail">
                 <ol class="types">
@@ -50,32 +53,42 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}" alt="${pokemon.name}" />
               </div>
             </div>
+
             <div class="modal-bottom">
-              <h1 class="aboutModal">About</h1>
+              <h3 class="modalAbout">About</h3>
+<hr> 
+
               <ol class="modalDetailsList">
-                <li class="modalDetailsList">Height: ${pokemon.height}</li>
-                <li class="modalDetailsList">Weight: ${pokemon.weight}</li>
+              <li class="detailTitle">Height: </li>  
+              <li class="detailItem">${pokemon.height}</li>
               </ol>
-              <ol class="abilitiesMoves">
-                Abilites: ${pokemon.abilities
+              <ol class="modalDetailsList">              
+              <li class="detailTitle">Weight: </li>  
+              <li class="detailItem">${pokemon.weight}</li>
+              </ol>
+              <ol class="modalDetailsList">
+              <li class="detailTitle">Abilities: </li>  
+                ${pokemon.abilities
                   .map(
                     (ability) => `
-                <li class="ability ${ability}">${ability}</li>
+                <li class="detailItem ${ability}">${ability}</li>
                 `
                   )
                   .join("")}
-              </ol>
-              <ol class="abilitiesMoves">
-                Moves: ${pokemon.moves
+                  </ol>
+<hr>
+                  <ol class="modalMovesList">
+              <h3 class="detailTitle">Moves: </h3>  
+                ${pokemon.moves
                   .map(
                     (move) => `
-                <li class="ability ${move}">${move}</li>
+                <li class="move ${move}">${move}</li>
                 `
                   )
                   .join("")}
+                  </ol>
               </ol>
             </div>
-          </div>
         </dialog>
 
           </li>
