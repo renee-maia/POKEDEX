@@ -24,7 +24,7 @@ function convertPokemonToLi(pokemon) {
           <div class="divButtonModalOpen">
           <button onclick="openModal(${
             pokemon.number
-          })" class="modalButton">More</button>
+          })" class="modalButtonOpen">+</button>
           </div>
 
 
@@ -32,7 +32,7 @@ function convertPokemonToLi(pokemon) {
           <div class="divButtonModalClose">
           <button onclick="closeModal(${
             pokemon.number
-          })" class="modalButton">Close</button>
+          })" class="modalButtonClose">x</button>
           </div>
            
           <div class="modal-top">
